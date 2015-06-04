@@ -1,3 +1,7 @@
 app:
     resource: "@AppBundle/Controller/"
     type:     annotation
+
+hackzilla_ticket:
+    resource: "@HackzillaTicketBundle/Resources/config/routing/ticket.yml"
+    prefix:   /
