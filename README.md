@@ -10,3 +10,8 @@ Example install of my [Ticket Bundle](https://github.com/hackzilla/TicketBundle)
 
 See [Setting up Permissions](http://symfony.com/doc/2.7/book/installation.html) for setting up the cache and log directories.
 
+```
+app/console doctrine:database:create
+doctrine:migrations:migrate
+app/console doctrine:fixtures:load
+```
