@@ -8,10 +8,29 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 class DefaultController extends Controller
 {
     /**
-     * @Route("/app/example", name="homepage")
+     * @Route("/", name="homepage")
      */
     public function indexAction()
     {
-        return $this->render('default/index.html.twig');
+        $users = $admins = [];
+
+        $languages = ['en', 'fr', 'ru', 'es', 'de'];
+
+        foreach ($languages as $language) {
+            $users[] = [
+                'user' => 'user-'.$language,
+                'password' => 'user'
+            ];
+        }
+
+        $admins[] = [
+            'user' => 'admin',
+            'password' => 'admin'
+        ];
+
+        return $this->render('default/index.html.twig', [
+            'users' => $users,
+            'admins' => $admins,
+        ]);
     }
 }

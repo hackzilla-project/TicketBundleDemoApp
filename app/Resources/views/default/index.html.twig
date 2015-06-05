@@ -1,5 +1,32 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    Homepage.
+    <h1>Demo Logins</h1>
+    <p>Use the logins below to help with testing.</p>
+
+    <table class="table table-hover table-striped">
+        <thead>
+        <tr>
+            <th scope="col">Access Level</th>
+            <th scope="col">User Name</th>
+            <th scope="col">Password</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for admin in admins %}
+            <tr>
+                <td>ROLE_ADMIN</td>
+                <td>{{ admin.user }}</td>
+                <td>{{ admin.password }}</td>
+            </tr>
+        {% endfor %}
+        {% for user in users %}
+            <tr>
+                <td>ROLE_USER</td>
+                <td>{{ user.user }}</td>
+                <td>{{ user.password }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
 {% endblock %}
