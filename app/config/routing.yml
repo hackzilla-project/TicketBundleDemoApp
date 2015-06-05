@@ -6,5 +6,5 @@ app:
     type:     annotation
 
 hackzilla_ticket:
-    resource: "@HackzillaTicketBundle/Resources/config/routing/ticket.yml"
+    resource: "@HackzillaTicketBundle/Resources/config/routing.yml"
     prefix:   /
