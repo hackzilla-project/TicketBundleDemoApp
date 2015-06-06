@@ -15,3 +15,16 @@ app/console doctrine:database:create
 doctrine:migrations:migrate
 app/console doctrine:fixtures:load
 ```
+
+# Using
+
+```
+app/console server:run
+```
+
+
+# Pull Requests
+
+All pull requests considered.
+
+At some point there is a plan to add tickets and messages to fixtures.
