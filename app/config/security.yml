@@ -26,4 +26,4 @@ security:
     access_control:
         - { path: ^/login$, role: IS_AUTHENTICATED_ANONYMOUSLY }
         - { path: ^/, role: IS_AUTHENTICATED_ANONYMOUSLY }
-        - { path: ^/ticket, role: ROLE_USER }
+        - { path: ^/ticket, role: IS_AUTHENTICATED_FULLY }
