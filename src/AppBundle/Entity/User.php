@@ -9,7 +9,7 @@ use Doctrine\ORM\Mapping as ORM;
  * @ORM\Entity
  * @ORM\Table(name="fos_user")
  */
-class User extends BaseUser
+class User extends BaseUser implements \Hackzilla\Bundle\TicketBundle\Model\UserInterface
 {
     /**
      * @ORM\Id

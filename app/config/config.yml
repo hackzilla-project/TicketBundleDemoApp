@@ -74,3 +74,6 @@ fos_user:
     user_class:             AppBundle\Entity\User
     use_listener:           true
     use_username_form_type: true
+
+hackzilla_ticket:
+    user_class:             AppBundle\Entity\User
