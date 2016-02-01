@@ -16,3 +16,7 @@ services:
             - [ setSession, ['@session'] ]
         tags:
             - { name: kernel.event_listener, event: security.interactive_login, method: setLocaleForAuthenticatedUser }
+
+    # http://stackoverflow.com/questions/35031401/symfony-2-7-3-doctrine-you-have-requested-a-non-existent-service-fos-user
+    fos_user.doctrine_registry:
+        alias: doctrine
