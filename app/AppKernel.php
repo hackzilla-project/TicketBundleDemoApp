@@ -18,6 +18,7 @@ class AppKernel extends Kernel
             new AppBundle\AppBundle(),
             new FOS\UserBundle\FOSUserBundle(),
             new Knp\Bundle\PaginatorBundle\KnpPaginatorBundle(),
+            new Vich\UploaderBundle\VichUploaderBundle(),
             new Hackzilla\Bundle\TicketBundle\HackzillaTicketBundle(),
         );
 

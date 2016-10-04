@@ -20,15 +20,19 @@
         "sensio/distribution-bundle": "~5.0",
         "sensio/framework-extra-bundle": "^3.0.2",
         "doctrine/doctrine-migrations-bundle": "^1.0",
-        "hackzilla/ticket-bundle": "~2.0",
+        "hackzilla/ticket-bundle": "dev-feature/file-upload as 3.0",
         "knplabs/knp-paginator-bundle": "^2.4.2",
         "knplabs/knp-components": "^1.2.4",
         "friendsofsymfony/user-bundle": "~2.0@dev",
-        "incenteev/composer-parameter-handler": "~2.0"
+        "incenteev/composer-parameter-handler": "~2.0",
+        "vich/uploader-bundle": "~1.0"
     },
     "require-dev": {
         "doctrine/doctrine-fixtures-bundle": "~2.2",
         "sensio/generator-bundle": "~3.0"
+    },
+    "suggest": {
+
     },
     "scripts": {
         "post-install-cmd": [
