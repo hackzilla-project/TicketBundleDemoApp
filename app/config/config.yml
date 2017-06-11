@@ -74,19 +74,25 @@ fos_user:
     user_class:             AppBundle\Entity\User
     use_listener:           true
     use_username_form_type: true
+    from_email:
+        address:        "%from_email_address%"
+        sender_name:    "%from_email_name%"
 
 hackzilla_ticket:
     user_class:             AppBundle\Entity\User
 #    ticket_class:           Hackzilla\Bundle\TicketBundle\Model\Ticket
 #    ticket_class:           Hackzilla\Bundle\TicketBundle\Entity\TicketWithAttachment
 #    message_class:          Hackzilla\Bundle\TicketBundle\Entity\TicketMessageWithAttachment
+#    message_class:          Hackzilla\Bundle\TicketBundle\Entity\TicketMessage
+    ticket_class:           Hackzilla\Bundle\TicketBundle\Entity\Ticket
+    message_class:          Hackzilla\Bundle\TicketBundle\Entity\TicketMessage
 #    features:
 #        attachment:         true
-
-vich_uploader:
-    db_driver: orm
-
-    mappings:
-        ticket_message_attachment:
-            uri_prefix:         /attachment
-            upload_destination: %kernel.root_dir%/../var/uploads/attachment/
+#
+#vich_uploader:
+#    db_driver: orm
+#
+#    mappings:
+#        ticket_message_attachment:
+#            uri_prefix:         /attachment
+#            upload_destination: %kernel.root_dir%/../var/uploads/attachment/
