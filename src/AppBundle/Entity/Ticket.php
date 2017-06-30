@@ -1,0 +1,1 @@
+../../../vendor/hackzilla/ticket-bundle/Resources/doc/entities/Doctrine/Ticket.php
