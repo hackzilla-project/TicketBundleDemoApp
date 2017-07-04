@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "b35ea38e7ba6b30d7c6f567a6c4467f7",
+    "content-hash": "5edd22c671ac25a6cbf1a8d8a4f6dc2d",
     "packages": [
         {
             "name": "alcaeus/mongo-php-adapter",
@@ -998,12 +998,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/hackzilla/TicketBundle.git",
-                "reference": "09ef464d7763d37be752bda1b8336c9408e5072e"
+                "reference": "0345b1f4fdfa21a372174fce82a9b76ca2f94829"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hackzilla/TicketBundle/zipball/09ef464d7763d37be752bda1b8336c9408e5072e",
-                "reference": "09ef464d7763d37be752bda1b8336c9408e5072e",
+                "url": "https://api.github.com/repos/hackzilla/TicketBundle/zipball/0345b1f4fdfa21a372174fce82a9b76ca2f94829",
+                "reference": "0345b1f4fdfa21a372174fce82a9b76ca2f94829",
                 "shasum": ""
             },
             "require": {
@@ -1064,20 +1064,20 @@
                 "ticket",
                 "ticketing"
             ],
-            "time": "2017-07-04 19:19:33"
+            "time": "2017-07-04 21:47:23"
         },
         {
             "name": "hackzilla/ticket-message",
-            "version": "dev-master",
+            "version": "0.2.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hackzilla/ticket-message.git",
-                "reference": "2343bdfbe993e64de688e5f4b445f1694b5abc29"
+                "reference": "c70c7485877ad8c0bec145286592b44631303e4c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hackzilla/ticket-message/zipball/2343bdfbe993e64de688e5f4b445f1694b5abc29",
-                "reference": "2343bdfbe993e64de688e5f4b445f1694b5abc29",
+                "url": "https://api.github.com/repos/hackzilla/ticket-message/zipball/c70c7485877ad8c0bec145286592b44631303e4c",
+                "reference": "c70c7485877ad8c0bec145286592b44631303e4c",
                 "shasum": ""
             },
             "require": {
@@ -1120,7 +1120,7 @@
                 "ticket",
                 "ticketing"
             ],
-            "time": "2017-06-28 21:26:01"
+            "time": "2017-07-04T19:14:08+00:00"
         },
         {
             "name": "incenteev/composer-parameter-handler",
@@ -3158,18 +3158,10 @@
             "time": "2017-03-15T01:02:10+00:00"
         }
     ],
-    "aliases": [
-        {
-            "alias": "0.4",
-            "alias_normalized": "0.4.0.0",
-            "version": "9999999-dev",
-            "package": "hackzilla/ticket-message"
-        }
-    ],
+    "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "hackzilla/ticket-bundle": 20,
-        "hackzilla/ticket-message": 20
+        "hackzilla/ticket-bundle": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

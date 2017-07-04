@@ -20,7 +20,6 @@
         "sensio/distribution-bundle": "~5.0",
         "sensio/framework-extra-bundle": "^3.0.2",
         "hackzilla/ticket-bundle": "dev-develop",
-        "hackzilla/ticket-message": "dev-master as 0.4",
         "friendsofsymfony/user-bundle": "~2.0",
         "incenteev/composer-parameter-handler": "~2.0",
         "vich/uploader-bundle": "~1.0"
