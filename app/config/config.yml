@@ -38,27 +38,37 @@ twig:
     strict_variables: "%kernel.debug%"
     form_themes: ['bootstrap_3_layout.html.twig']
 
-# Doctrine Configuration
-doctrine:
-    dbal:
-        driver:   pdo_mysql
-        host:     "%database_host%"
-        port:     "%database_port%"
-        dbname:   "%database_name%"
-        user:     "%database_user%"
-        password: "%database_password%"
-        charset:  UTF8
-        # if using pdo_sqlite as your database driver:
-        #   1. add the path in parameters.yml
-        #     e.g. database_path: "%kernel.root_dir%/data/data.db3"
-        #   2. Uncomment database_path in parameters.yml.dist
-        #   3. Uncomment next line:
-        #     path:     "%database_path%"
+doctrine_mongodb:
+    connections:
+        default:
+            server: "mongodb://localhost:27017"
+            options: {}
+    default_database: test_database
+    document_managers:
+        default:
+            auto_mapping: true
 
-    orm:
-        auto_generate_proxy_classes: "%kernel.debug%"
-        naming_strategy: doctrine.orm.naming_strategy.underscore
-        auto_mapping: true
+# Doctrine Configuration
+#doctrine:
+#    dbal:
+#        driver:   pdo_mysql
+#        host:     "%database_host%"
+#        port:     "%database_port%"
+#        dbname:   "%database_name%"
+#        user:     "%database_user%"
+#        password: "%database_password%"
+#        charset:  UTF8
+#        # if using pdo_sqlite as your database driver:
+#        #   1. add the path in parameters.yml
+#        #     e.g. database_path: "%kernel.root_dir%/data/data.db3"
+#        #   2. Uncomment database_path in parameters.yml.dist
+#        #   3. Uncomment next line:
+#        #     path:     "%database_path%"
+#
+#    orm:
+#        auto_generate_proxy_classes: "%kernel.debug%"
+#        naming_strategy: doctrine.orm.naming_strategy.underscore
+#        auto_mapping: true
 
 # Swiftmailer Configuration
 swiftmailer:
@@ -69,7 +79,7 @@ swiftmailer:
     spool:     { type: memory }
 
 fos_user:
-    db_driver:              orm
+    db_driver:              mongodb
     firewall_name:          oauth
     user_class:             AppBundle\Entity\User
     use_listener:           true
@@ -83,7 +93,7 @@ hackzilla_ticket:
     ticket_class:           AppBundle\Entity\Ticket
     message_class:          AppBundle\Entity\TicketMessage
     event_manager:         'hackzilla_ticket.event_manager.symfony'
-    storage_manager:       'hackzilla_ticket.storage_manager.doctrine_orm'
+    storage_manager:       'hackzilla_ticket.storage_manager.mongodb'
     translate_manager:     'hackzilla_ticket.translate_manager.symfony'
     user_manager:          'hackzilla_ticket.user_manager.symfony'
     features:

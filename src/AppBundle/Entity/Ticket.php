@@ -1,1 +1,1 @@
-../../../vendor/hackzilla/ticket-bundle/Resources/doc/entities/Doctrine/Ticket.php
+../../../vendor/hackzilla/ticket-bundle/Resources/doc/entities/MongoDB/Ticket.php
