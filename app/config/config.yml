@@ -80,17 +80,26 @@ fos_user:
 
 hackzilla_ticket:
     user_class:             AppBundle\Entity\User
-#    ticket_class:           Hackzilla\Bundle\TicketBundle\Model\Ticket
-#    ticket_class:           Hackzilla\Bundle\TicketBundle\Entity\TicketWithAttachment
-#    message_class:          Hackzilla\Bundle\TicketBundle\Entity\TicketMessageWithAttachment
-#    message_class:          Hackzilla\Bundle\TicketBundle\Entity\TicketMessage
-    ticket_class:           Hackzilla\Bundle\TicketBundle\Entity\Ticket
-    message_class:          Hackzilla\Bundle\TicketBundle\Entity\TicketMessage
-#    features:
-#        attachment:         true
-#
-#vich_uploader:
-#    db_driver: orm
+    ticket_class:           AppBundle\Entity\Ticket
+    message_class:          AppBundle\Entity\TicketMessage
+    event_manager:         'hackzilla_ticket.event_manager.symfony'
+    storage_manager:       'hackzilla_ticket.storage_manager.doctrine_orm'
+    translate_manager:     'hackzilla_ticket.translate_manager.symfony'
+    user_manager:          'hackzilla_ticket.user_manager.symfony'
+    features:
+        - 'attachment'
+    pagination:
+        page_name: page                # page query parameter name
+        sort_field_name: sort          # sort field query parameter name
+        sort_direction_name: direction # sort direction query parameter name
+        items_per_page: 10
+
+vich_uploader:
+    db_driver: mongodb
+
+white_october_pagerfanta:
+    default_view: twitter_bootstrap3
+
 #
 #    mappings:
 #        ticket_message_attachment:
