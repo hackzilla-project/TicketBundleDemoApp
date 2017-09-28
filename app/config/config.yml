@@ -86,13 +86,14 @@ hackzilla_ticket:
 #    message_class:          Hackzilla\Bundle\TicketBundle\Entity\TicketMessage
     ticket_class:           Hackzilla\Bundle\TicketBundle\Entity\Ticket
     message_class:          Hackzilla\Bundle\TicketBundle\Entity\TicketMessage
+    features: ~
 #    features:
 #        attachment:         true
-#
-#vich_uploader:
-#    db_driver: orm
-#
-#    mappings:
-#        ticket_message_attachment:
-#            uri_prefix:         /attachment
-#            upload_destination: %kernel.root_dir%/../var/uploads/attachment/
+
+vich_uploader:
+    db_driver: orm
+
+    mappings:
+        ticket_message_attachment:
+            uri_prefix:         /attachment
+            upload_destination: %kernel.root_dir%/../var/uploads/attachment/
