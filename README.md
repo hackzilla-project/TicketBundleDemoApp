@@ -8,18 +8,20 @@ Example install of my [Ticket Bundle](https://github.com/hackzilla/TicketBundle)
 
 # Installation
 
-See [Setting up Permissions](http://symfony.com/doc/3.0/book/installation.html) for setting up the cache and log directories.
+See [Setting up Permissions](http://symfony.com/doc/5.4/book/installation.html) for setting up the cache and log directories.
 
 ```
-app/console doctrine:database:create
-doctrine:migrations:migrate
-app/console doctrine:fixtures:load
+bin/console doctrine:database:create
+bin/console doctrine:schema:create
+bin/console doctrine:fixtures:load
 ```
 
-# Using
+# Testing Locally
+
+This project can use the [symfony cli](https://symfony.com/download) to create a web server.
 
 ```
-app/console server:run
+symfony serve
 ```
 
 

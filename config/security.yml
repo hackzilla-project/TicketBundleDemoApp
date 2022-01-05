@@ -1,0 +1,28 @@
+security:
+
+    password_hashers:
+        Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface: 'auto'
+
+    providers:
+        users_in_memory: { memory: null }
+
+    encoders:
+        FOS\UserBundle\Model\UserInterface: sha512
+
+    role_hierarchy:
+        ROLE_ADMIN:       ROLE_USER, ROLE_TICKET_ADMIN
+        ROLE_SUPER_ADMIN: ROLE_ADMIN
+
+    firewalls:
+        dev:
+            pattern: ^/(_(profiler|wdt)|css|images|js)/
+            security: false
+        main:
+            pattern: ^/
+            form_login:
+                provider: fos_userbundle
+                csrf_token_generator: security.csrf.token_manager # Use form.csrf_provider instead for Symfony <2.4
+            logout:
+                path: app_logout
+            anonymous:    true
+
