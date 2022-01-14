@@ -37,6 +37,7 @@
         },
         "optimize-autoloader": true,
         "preferred-install": {
+            "hackzilla/ticket-bundle": "source",
             "*": "dist"
         },
         "sort-packages": true
