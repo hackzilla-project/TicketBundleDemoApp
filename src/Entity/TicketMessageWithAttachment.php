@@ -9,13 +9,13 @@ use Hackzilla\Bundle\TicketBundle\Model\TicketMessageWithAttachment as BaseTicke
 #[ORM\Entity(repositoryClass: TicketMessageWithAttachmentRepository::class)]
 class TicketMessageWithAttachment extends BaseTicketMessageWithAttachment
 {
-    // #[ORM\Id]
-    // #[ORM\GeneratedValue]
-    // #[ORM\Column(type: 'integer')]
-    // protected $id;
+    #[ORM\Id]
+    #[ORM\GeneratedValue]
+    #[ORM\Column(type: 'integer')]
+    protected $id;
 
-    // public function getId(): ?int
-    // {
-    //     return $this->id;
-    // }
+    public function getId(): ?int
+    {
+        return $this->id;
+    }
 }
