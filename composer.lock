@@ -1252,12 +1252,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/hackzilla-project/TicketBundle.git",
-                "reference": "51443851326b5295b89a984dc27e5bcec3a821a5"
+                "reference": "0c7ab84fd8f38a0c970ce88a6148bb8cfb7f3227"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hackzilla-project/TicketBundle/zipball/51443851326b5295b89a984dc27e5bcec3a821a5",
-                "reference": "51443851326b5295b89a984dc27e5bcec3a821a5",
+                "url": "https://api.github.com/repos/hackzilla-project/TicketBundle/zipball/0c7ab84fd8f38a0c970ce88a6148bb8cfb7f3227",
+                "reference": "0c7ab84fd8f38a0c970ce88a6148bb8cfb7f3227",
                 "shasum": ""
             },
             "require": {
@@ -1344,7 +1344,7 @@
                 "issues": "https://github.com/hackzilla-project/TicketBundle/issues",
                 "source": "https://github.com/hackzilla-project/TicketBundle/tree/4.x"
             },
-            "time": "2022-04-18T12:43:48+00:00"
+            "time": "2022-04-18T17:06:36+00:00"
         },
         {
             "name": "jms/metadata",
