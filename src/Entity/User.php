@@ -3,6 +3,7 @@
 namespace App\Entity;
 
 use App\Repository\UserRepository;
+use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 use Hackzilla\Bundle\TicketBundle\Model\UserInterface as TicketBundleUserInterface;
 use Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface;

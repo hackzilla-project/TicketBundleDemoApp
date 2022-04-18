@@ -2,25 +2,25 @@
 
 namespace App\Repository;
 
-use App\Entity\TicketMessageWithAttachment;
+use App\Entity\TicketMessage;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 
 /**
- * @method TicketMessageWithAttachment|null find($id, $lockMode = null, $lockVersion = null)
- * @method TicketMessageWithAttachment|null findOneBy(array $criteria, array $orderBy = null)
- * @method TicketMessageWithAttachment[]    findAll()
- * @method TicketMessageWithAttachment[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
+ * @method TicketMessage|null find($id, $lockMode = null, $lockVersion = null)
+ * @method TicketMessage|null findOneBy(array $criteria, array $orderBy = null)
+ * @method TicketMessage[]    findAll()
+ * @method TicketMessage[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
  */
-class TicketMessageWithAttachmentRepository extends ServiceEntityRepository
+class TicketMessageRepository extends ServiceEntityRepository
 {
     public function __construct(ManagerRegistry $registry)
     {
-        parent::__construct($registry, TicketMessageWithAttachment::class);
+        parent::__construct($registry, TicketMessage::class);
     }
 
     // /**
-    //  * @return TicketMessageWithAttachment[] Returns an array of TicketMessageWithAttachment objects
+    //  * @return TicketMessage[] Returns an array of TicketMessage objects
     //  */
     /*
     public function findByExampleField($value)
@@ -37,7 +37,7 @@ class TicketMessageWithAttachmentRepository extends ServiceEntityRepository
     */
 
     /*
-    public function findOneBySomeField($value): ?TicketMessageWithAttachment
+    public function findOneBySomeField($value): ?TicketMessage
     {
         return $this->createQueryBuilder('t')
             ->andWhere('t.exampleField = :val')
