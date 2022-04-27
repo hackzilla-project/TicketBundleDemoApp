@@ -3,7 +3,6 @@
 namespace App\Entity;
 
 use App\Repository\TicketMessageRepository;
-use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 use Hackzilla\Bundle\TicketBundle\Model\MessageAttachmentInterface;
 use Hackzilla\Bundle\TicketBundle\Model\MessageAttachmentTrait;

@@ -19,13 +19,13 @@ class DefaultController extends AbstractController
         foreach ($languages as $language) {
             $users[] = [
                 'user' => 'user-'.$language.'@example.org',
-                'password' => 'user'
+                'password' => 'user',
             ];
         }
 
         $admins[] = [
             'user' => 'admin@example.org',
-            'password' => 'admin'
+            'password' => 'admin',
         ];
 
         $totalTicketCount = count($ticketManager->findTickets());

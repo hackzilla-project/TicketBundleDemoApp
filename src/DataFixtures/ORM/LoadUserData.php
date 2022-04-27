@@ -46,9 +46,9 @@ class LoadUserData extends AbstractFixture implements OrderedFixtureInterface, C
         $userAdmin->setUsername($username);
         $userAdmin->setEmail($username.'@domain.test');
         $userAdmin->setPlainPassword($password);
-        //$userAdmin->setPassword('3NCRYPT3D-V3R51ON');
+        // $userAdmin->setPassword('3NCRYPT3D-V3R51ON');
         $userAdmin->setEnabled(true);
-        $userAdmin->setRoles(array('ROLE_ADMIN'));
+        $userAdmin->setRoles(['ROLE_ADMIN']);
 
         // Update the user
         $userManager->updateUser($userAdmin, true);
@@ -68,9 +68,9 @@ class LoadUserData extends AbstractFixture implements OrderedFixtureInterface, C
         $user->setUsername($username);
         $user->setEmail($username.'@domain.test');
         $user->setPlainPassword($password);
-        //$user->setPassword('3NCRYPT3D-V3R51ON');
+        // $user->setPassword('3NCRYPT3D-V3R51ON');
         $user->setEnabled(true);
-        $user->setRoles(array('ROLE_USER'));
+        $user->setRoles(['ROLE_USER']);
 
         // Update the user
         $userManager->updateUser($user, true);
@@ -84,7 +84,7 @@ class LoadUserData extends AbstractFixture implements OrderedFixtureInterface, C
     /**
      * {@inheritDoc}
      */
-    public function getOrder()
+    public function getOrder(): int
     {
         return 1; // the order in which fixtures will be loaded
     }

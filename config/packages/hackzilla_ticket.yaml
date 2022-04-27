@@ -8,4 +8,4 @@ hackzilla_ticket:
     #     show_attachment: 'ticket/show_attachment.html.twig'
     ticket_class: App\Entity\Ticket
     message_class: App\Entity\TicketMessage
-    permission_class: App\Service\TicketPermissionService
+    permission_class: App\Manager\PermissionManager

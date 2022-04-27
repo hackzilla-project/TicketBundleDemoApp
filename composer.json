@@ -18,9 +18,9 @@
         "symfony/flex": "^1.17.1 || ^2",
         "symfony/framework-bundle": "^5.4",
         "symfony/runtime": "^5.4",
+        "symfony/security-bundle": "^5.4",
         "symfony/twig-bundle": "^5.4",
         "symfony/yaml": "^5.4",
-        "symfony/security-bundle": "^5.4",
         "vich/uploader-bundle": "^1.19"
     },
     "require-dev": {
