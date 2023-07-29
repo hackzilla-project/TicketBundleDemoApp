@@ -8,8 +8,10 @@ use Hackzilla\Bundle\TicketBundle\Model\MessageAttachmentInterface;
 use Hackzilla\Bundle\TicketBundle\Model\MessageAttachmentTrait;
 use Hackzilla\Bundle\TicketBundle\Model\TicketMessageInterface;
 use Hackzilla\Bundle\TicketBundle\Model\TicketMessageTrait;
+use Vich\UploaderBundle\Mapping\Annotation as Vich;
 
 #[ORM\Entity(repositoryClass: TicketMessageRepository::class)]
+#[Vich\Uploadable]
 class TicketMessage implements TicketMessageInterface, MessageAttachmentInterface
 {
     use TicketMessageTrait;
@@ -31,6 +33,9 @@ class TicketMessage implements TicketMessageInterface, MessageAttachmentInterfac
 
     #[ORM\Column(type: 'datetime', nullable: false)]
     private $createdAt;
+
+    #[Vich\UploadableField(mapping: 'ticket_message_attachment', fileNameProperty: 'attachmentName')]
+    protected $attachmentFile = null;
 
     #[ORM\Column(type: 'string', length: 255, nullable: true)]
     private $attachmentName;

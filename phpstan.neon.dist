@@ -1,7 +1,4 @@
 parameters:
     level: 1
     paths:
-        - .
-    excludePaths:
-        - vendor/
-        - Tests/
+        - src/
