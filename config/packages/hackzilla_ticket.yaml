@@ -1,10 +1,11 @@
 hackzilla_ticket:
     user_class: App\Entity\User
-    ticket_class: App\Entity\TicketWithAttachment
-    message_class: App\Entity\TicketMessageWithAttachment
     # templates:
     #     index: 'ticket/index.html.twig'
     #     new: 'ticket/new.html.twig'
     #     prototype: 'ticket/prototype.html.twig'
     #     show: 'ticket/show.html.twig'
     #     show_attachment: 'ticket/show_attachment.html.twig'
+    ticket_class: App\Entity\Ticket
+    message_class: App\Entity\TicketMessage
+    permission_class: App\Manager\PermissionManager

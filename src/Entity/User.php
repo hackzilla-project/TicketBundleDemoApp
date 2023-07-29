@@ -5,12 +5,10 @@ namespace App\Entity;
 use App\Repository\UserRepository;
 use Doctrine\ORM\Mapping as ORM;
 use Hackzilla\Bundle\TicketBundle\Model\UserInterface as TicketBundleUserInterface;
-use Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface;
-use Symfony\Component\Security\Core\User\UserInterface;
 
 #[ORM\Entity(repositoryClass: UserRepository::class)]
 #[ORM\Table(name: '`user`')]
-class User implements UserInterface, PasswordAuthenticatedUserInterface, TicketBundleUserInterface
+class User implements TicketBundleUserInterface
 {
     #[ORM\Id]
     #[ORM\GeneratedValue]
@@ -115,7 +113,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface, TicketB
         // $this->plainPassword = null;
     }
 
-    public function __tostring(): string
+    public function __toString(): string
     {
         return $this->getUserIdentifier();
     }

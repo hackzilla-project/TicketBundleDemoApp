@@ -2,25 +2,25 @@
 
 namespace App\Repository;
 
-use App\Entity\TicketWithAttachment;
+use App\Entity\Ticket;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 
 /**
- * @method TicketWithAttachment|null find($id, $lockMode = null, $lockVersion = null)
- * @method TicketWithAttachment|null findOneBy(array $criteria, array $orderBy = null)
- * @method TicketWithAttachment[]    findAll()
- * @method TicketWithAttachment[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
+ * @method Ticket|null find($id, $lockMode = null, $lockVersion = null)
+ * @method Ticket|null findOneBy(array $criteria, array $orderBy = null)
+ * @method Ticket[]    findAll()
+ * @method Ticket[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
  */
-class TicketWithAttachmentRepository extends ServiceEntityRepository
+class TicketRepository extends ServiceEntityRepository
 {
     public function __construct(ManagerRegistry $registry)
     {
-        parent::__construct($registry, TicketWithAttachment::class);
+        parent::__construct($registry, Ticket::class);
     }
 
     // /**
-    //  * @return TicketWithAttachment[] Returns an array of TicketWithAttachment objects
+    //  * @return Ticket[] Returns an array of Ticket objects
     //  */
     /*
     public function findByExampleField($value)
@@ -37,7 +37,7 @@ class TicketWithAttachmentRepository extends ServiceEntityRepository
     */
 
     /*
-    public function findOneBySomeField($value): ?TicketWithAttachment
+    public function findOneBySomeField($value): ?Ticket
     {
         return $this->createQueryBuilder('t')
             ->andWhere('t.exampleField = :val')
