@@ -1,6 +1,4 @@
 security:
-    enable_authenticator_manager: true
-
     # https://symfony.com/doc/current/security.html#registering-the-user-hashing-passwords
     password_hashers:
         Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface: 'auto'
@@ -27,11 +25,13 @@ security:
         main:
             lazy: true
             provider: app_user_provider
+            pattern: ^/
 
             form_login:
                 # "login" is the name of the route created previously
-                login_path: login
-                check_path: login
+                login_path: app_login
+                check_path: app_login
+                enable_csrf: true
 
             # activate different ways to authenticate
             # https://symfony.com/doc/current/security.html#the-firewall
@@ -41,12 +41,14 @@ security:
 
             logout:
                 path: app_logout
+                # where to redirect after logout
+                # target: app_any_route
 
     # Easy way to control access for large sections of your site
     # Note: Only the *first* access control that matches will be used
     access_control:
-        - { path: ^/login$, role: IS_AUTHENTICATED_ANONYMOUSLY }
-        - { path: ^/, role: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/login$, role: PUBLIC_ACCESS }
+        - { path: ^/, role: PUBLIC_ACCESS }
         - { path: ^/ticket, role: IS_AUTHENTICATED_FULLY }
 
 when@test:

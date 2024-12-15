@@ -1,24 +1,22 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\DataFixtures\ORM;
 
 use Doctrine\Common\DataFixtures\AbstractFixture;
 use Doctrine\Common\DataFixtures\OrderedFixtureInterface;
 use Doctrine\Persistence\ObjectManager;
-use Symfony\Component\DependencyInjection\ContainerAwareInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
-class LoadUserData extends AbstractFixture implements OrderedFixtureInterface, ContainerAwareInterface
+class LoadUserData extends AbstractFixture implements OrderedFixtureInterface
 {
-    /**
-     * @var ContainerInterface
-     */
-    private $container;
+    private ?ContainerInterface $container = null;
 
     /**
      * {@inheritDoc}
      */
-    public function setContainer(ContainerInterface $container = null)
+    public function setContainer(ContainerInterface $container = null): void
     {
         $this->container = $container;
     }
@@ -26,7 +24,7 @@ class LoadUserData extends AbstractFixture implements OrderedFixtureInterface, C
     /**
      * {@inheritDoc}
      */
-    public function load(ObjectManager $manager)
+    public function load(ObjectManager $manager): void
     {
         $languages = ['en', 'fr', 'ru', 'es', 'de'];
 
@@ -37,7 +35,7 @@ class LoadUserData extends AbstractFixture implements OrderedFixtureInterface, C
         $this->setupAdminUser($manager, 'admin', 'admin');
     }
 
-    public function setupAdminUser(ObjectManager $manager, $username, $password)
+    public function setupAdminUser(ObjectManager $manager, string $username, $password): void
     {
         $userManager = $this->container->get('fos_user.user_manager');
 
@@ -59,7 +57,7 @@ class LoadUserData extends AbstractFixture implements OrderedFixtureInterface, C
         $this->addReference($username, $userAdmin);
     }
 
-    public function setupUser(ObjectManager $manager, $username, $password)
+    public function setupUser(ObjectManager $manager, string $username, $password): void
     {
         $userManager = $this->container->get('fos_user.user_manager');
 
